@@ -1,0 +1,593 @@
+{
+  "Uuid": "7eb4f945-1a03-48d5-88e1-b5a4cd13f1ba",
+  "IsCustomNode": false,
+  "Description": null,
+  "Name": "DoorOpeningSide",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "DSRevitNodesUI.Categories, DSRevitNodesUI",
+      "SelectedIndex": 468,
+      "SelectedString": "OST_Rooms",
+      "NodeType": "ExtensionNode",
+      "Id": "ca685b26be6c4c8582341bbe636e9384",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "2337e0f8a8bd4117a12ca0dcb3fe8dca",
+          "Name": "Category",
+          "Description": "The selected Category.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "All built-in categories."
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.ElementsOfCategory, DSRevitNodesUI",
+      "NodeType": "ExtensionNode",
+      "Id": "b57ec7a31913475ba340fd89c01a3f81",
+      "Inputs": [
+        {
+          "Id": "08a16635746d4a0085e22c8009dc46e6",
+          "Name": "Category",
+          "Description": "The Category",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "f70dc13bdc5a4527b97ca23360bea0b7",
+          "Name": "Elements",
+          "Description": "An element type.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Get all elements of the specified category from the model."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DynamoMEP.Room.Doors@Revit.Elements.Room",
+      "Id": "c150196ffc2c42638ea947e084e7779e",
+      "Inputs": [
+        {
+          "Id": "148850aa156649aebf4b5ae63644d0af",
+          "Name": "room",
+          "Description": "Room",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "9e8ef3fc07684e9ab547794a45c7b211",
+          "Name": "FamilyInstance[]",
+          "Description": "FamilyInstance[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Retrive Doors around the room\n\nRoom.Doors (room: Room): FamilyInstance[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DynamoMEP.FamilyInstance.GetReferencesPlanesByType@Revit.Elements.FamilyInstance,string",
+      "Id": "2d8e0b4fe71d490ab7cdb8ba965dca5e",
+      "Inputs": [
+        {
+          "Id": "eb0dd65fac494f468a2948524ea80b37",
+          "Name": "familyInstance",
+          "Description": "The family instance\n\nFamilyInstance",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "94c4e48ff84c4cc0b72d6d95e735fc0d",
+          "Name": "familyInstanceReferenceType",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "4a60b52d9e5e4191a8f6226241a2716b",
+          "Name": "Plane[]",
+          "Description": "Plane[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Return all planes aligned with the selected references\n\nFamilyInstance.GetReferencesPlanesByType (familyInstance: FamilyInstance, familyInstanceReferenceType: string): Plane[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.CoordinateSystem.ByPlane@Autodesk.DesignScript.Geometry.Plane",
+      "Id": "9c712b6547464990be843f67a65624b6",
+      "Inputs": [
+        {
+          "Id": "c9f07ac9600e497a9a531ee6bc4ed67a",
+          "Name": "plane",
+          "Description": "Plane\nDefault value : Autodesk.DesignScript.Geometry.Plane.XY()",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "e7f250f0b9594e40928e02146907df76",
+          "Name": "CoordinateSystem",
+          "Description": "CoordinateSystem",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Create a CoordinateSystem with origin equal to input Plane origin, and X and Y axes lying in the Plane, aligned with Plane X and Y axes.\n\nCoordinateSystem.ByPlane (plane: Plane = Autodesk.DesignScript.Geometry.Plane.XY()): CoordinateSystem"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Point.ByCoordinates@double,double,double",
+      "Id": "06fcd5e885a241d8a6cc68ca63a382db",
+      "Inputs": [
+        {
+          "Id": "a1735eb6eb944bbb8484f1b373da7c3b",
+          "Name": "x",
+          "Description": "double\nDefault value : 0",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "8799a49e59674a2c9bd13d1f2729d7a3",
+          "Name": "y",
+          "Description": "double\nDefault value : 0",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "51e7f6507ef14816a66379b9200254bb",
+          "Name": "z",
+          "Description": "double\nDefault value : 0",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "17d9d549bac744b799a33879278f92c8",
+          "Name": "Point",
+          "Description": "Point",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Form a Point given 3 cartesian coordinates\n\nPoint.ByCoordinates (x: double = 0, y: double = 0, z: double = 0): Point"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "0.2;",
+      "Id": "0af90080ac634a538110a1cbb1122dcc",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "1a4d0679f1094206ac434104ade94bba",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Geometry.Transform@Autodesk.DesignScript.Geometry.CoordinateSystem",
+      "Id": "9ace745f1d764591bd6e0c0b2fbcba5c",
+      "Inputs": [
+        {
+          "Id": "422cac370ccf483987ae2cd7c1e3009a",
+          "Name": "geometry",
+          "Description": "Autodesk.DesignScript.Geometry.Geometry",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "eccc3cd41b554bb9b8c73af5e2637de0",
+          "Name": "cs",
+          "Description": "CoordinateSystem",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "961a3ef53032424baa44602f90c27b47",
+          "Name": "Geometry",
+          "Description": "Geometry",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Transforms geometry by the given CoordinateSystem's transform\n\nGeometry.Transform (cs: CoordinateSystem): Geometry"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Revit.Elements.Room.IsInsideRoom@Autodesk.DesignScript.Geometry.Point",
+      "Id": "b0cdbb9ecb434530a1387b32f91885ce",
+      "Inputs": [
+        {
+          "Id": "611ae8d52d5540e98e2e09b7caac624f",
+          "Name": "room",
+          "Description": "Revit.Elements.Room",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "0defabbebaa547d7aa5e6a8c7be09b82",
+          "Name": "point",
+          "Description": "Point",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "7171cf7d9f894991a163f06d7240c6d5",
+          "Name": "bool",
+          "Description": "bool",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Check if a point is inside of a room\n\nRoom.IsInsideRoom (point: Point): bool"
+    },
+    {
+      "ConcreteType": "DynamoMEP.UI.FamilyInstanceReferenceTypeDropDown, DynamoMEPUI",
+      "SelectedIndex": 5,
+      "SelectedString": "Front",
+      "NodeType": "ExtensionNode",
+      "Id": "83be8af6e0e54356b31f22fd05e767e2",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "4876248921db4203ac1145223215c3e5",
+          "Name": ">",
+          "Description": "The selected family reference type",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Select the type of reference"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "2337e0f8a8bd4117a12ca0dcb3fe8dca",
+      "End": "08a16635746d4a0085e22c8009dc46e6",
+      "Id": "d5f45bdad85f45e394b7e8e6a2059051"
+    },
+    {
+      "Start": "f70dc13bdc5a4527b97ca23360bea0b7",
+      "End": "148850aa156649aebf4b5ae63644d0af",
+      "Id": "971c0fd386bd42499f8c28c21d64da0e"
+    },
+    {
+      "Start": "f70dc13bdc5a4527b97ca23360bea0b7",
+      "End": "611ae8d52d5540e98e2e09b7caac624f",
+      "Id": "b486cdf9a8bf40a88f6819a486767205"
+    },
+    {
+      "Start": "9e8ef3fc07684e9ab547794a45c7b211",
+      "End": "eb0dd65fac494f468a2948524ea80b37",
+      "Id": "f0ecbdf668c54accbfe7f691bd094eba"
+    },
+    {
+      "Start": "4a60b52d9e5e4191a8f6226241a2716b",
+      "End": "c9f07ac9600e497a9a531ee6bc4ed67a",
+      "Id": "50ab9fa1c88641568f8248a7eccc4971"
+    },
+    {
+      "Start": "e7f250f0b9594e40928e02146907df76",
+      "End": "eccc3cd41b554bb9b8c73af5e2637de0",
+      "Id": "76bc923a95aa4e698bf13aaeb2c1469d"
+    },
+    {
+      "Start": "17d9d549bac744b799a33879278f92c8",
+      "End": "422cac370ccf483987ae2cd7c1e3009a",
+      "Id": "b2fdff92995e488285ba92e2e0ca4edd"
+    },
+    {
+      "Start": "1a4d0679f1094206ac434104ade94bba",
+      "End": "51e7f6507ef14816a66379b9200254bb",
+      "Id": "e271f560daa846188b1b53e2c610fa4c"
+    },
+    {
+      "Start": "961a3ef53032424baa44602f90c27b47",
+      "End": "0defabbebaa547d7aa5e6a8c7be09b82",
+      "Id": "2f8b426d7dcd486ebd64a11c5665d0e7"
+    },
+    {
+      "Start": "4876248921db4203ac1145223215c3e5",
+      "End": "94c4e48ff84c4cc0b72d6d95e735fc0d",
+      "Id": "9e0ca27b216b4c15bfce35dd90c56c5a"
+    }
+  ],
+  "Dependencies": [],
+  "NodeLibraryDependencies": [
+    {
+      "Name": "DynamoMEP",
+      "Version": "1.0.1",
+      "ReferenceType": "Package",
+      "Nodes": [
+        "c150196ffc2c42638ea947e084e7779e",
+        "2d8e0b4fe71d490ab7cdb8ba965dca5e",
+        "83be8af6e0e54356b31f22fd05e767e2"
+      ]
+    }
+  ],
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.5.0.7460",
+      "RunType": "Automatic",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "Background Preview",
+      "EyeX": 18.171350819820788,
+      "EyeY": 5.9803902658889116,
+      "EyeZ": 22.5946433993548,
+      "LookX": 0.0013333639634467431,
+      "LookY": -0.0016814034208607609,
+      "LookZ": -0.002291926715560777,
+      "UpX": 0.17198810491541677,
+      "UpY": 0.93969262078590809,
+      "UpZ": -0.295631307895687
+    },
+    "NodeViews": [
+      {
+        "ShowGeometry": true,
+        "Name": "Categories",
+        "Id": "ca685b26be6c4c8582341bbe636e9384",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -308.53555781581815,
+        "Y": 150.59064820446508
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "All Elements of Category",
+        "Id": "b57ec7a31913475ba340fd89c01a3f81",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -87.535557815818152,
+        "Y": 150.59064820446508
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Room.Doors",
+        "Id": "c150196ffc2c42638ea947e084e7779e",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 163.66881895853874,
+        "Y": 148.80160126133131
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "FamilyInstance.GetReferencesPlanesByType",
+        "Id": "2d8e0b4fe71d490ab7cdb8ba965dca5e",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 787.59137282876816,
+        "Y": 272.21876867418575
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "CoordinateSystem.ByPlane",
+        "Id": "9c712b6547464990be843f67a65624b6",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1205.6537577507697,
+        "Y": 281.9263712400317
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Point.ByCoordinates",
+        "Id": "06fcd5e885a241d8a6cc68ca63a382db",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1309.9998547116811,
+        "Y": 128.7829991451394
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "0af90080ac634a538110a1cbb1122dcc",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1199.8962858119414,
+        "Y": 183.7522864203695
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Geometry.Transform",
+        "Id": "9ace745f1d764591bd6e0c0b2fbcba5c",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1550.1621367964483,
+        "Y": 257.42700855808215
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Room.IsInsideRoom",
+        "Id": "b0cdbb9ecb434530a1387b32f91885ce",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1875.12531392838,
+        "Y": -87.3232895735805
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "FamilyInstanceReferenceType",
+        "Id": "83be8af6e0e54356b31f22fd05e767e2",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 512.54446389421219,
+        "Y": 296.06007369571921
+      }
+    ],
+    "Annotations": [
+      {
+        "Id": "b158ee4130f14e8ca8cba9a9aa5ab84d",
+        "Title": "Get all rooms",
+        "Nodes": [
+          "ca685b26be6c4c8582341bbe636e9384",
+          "b57ec7a31913475ba340fd89c01a3f81"
+        ],
+        "Left": -318.53555781581815,
+        "Top": 97.590648204465083,
+        "Width": 415.0,
+        "Height": 146.0,
+        "FontSize": 36.0,
+        "InitialTop": 150.59064820446508,
+        "InitialHeight": 123.0,
+        "TextblockHeight": 43.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "87e60538fb274961a2c989defc580808",
+        "Title": "Get the doors of a room",
+        "Nodes": [
+          "c150196ffc2c42638ea947e084e7779e"
+        ],
+        "Left": 153.66881895853874,
+        "Top": 52.301601261331314,
+        "Width": 271.0,
+        "Height": 189.5,
+        "FontSize": 36.0,
+        "InitialTop": 148.80160126133131,
+        "InitialHeight": 123.0,
+        "TextblockHeight": 86.5,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "303929e8cd974037aa09822c50d05ef2",
+        "Title": "Get the \"Front\" reference plane",
+        "Nodes": [
+          "2d8e0b4fe71d490ab7cdb8ba965dca5e",
+          "83be8af6e0e54356b31f22fd05e767e2"
+        ],
+        "Left": 502.54446389421219,
+        "Top": 219.21876867418575,
+        "Width": 634.046908934556,
+        "Height": 169.84130502153346,
+        "FontSize": 36.0,
+        "InitialTop": 272.21876867418575,
+        "InitialHeight": 146.84130502153346,
+        "TextblockHeight": 43.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "006d2a34cadf463daa0178cd39b190f9",
+        "Title": "Create a point on the opening side of the door",
+        "Nodes": [
+          "9c712b6547464990be843f67a65624b6",
+          "06fcd5e885a241d8a6cc68ca63a382db",
+          "0af90080ac634a538110a1cbb1122dcc",
+          "9ace745f1d764591bd6e0c0b2fbcba5c"
+        ],
+        "Left": 1189.8962858119414,
+        "Top": 32.2829991451394,
+        "Width": 607.76585098450687,
+        "Height": 342.6433720948923,
+        "FontSize": 36.0,
+        "InitialTop": 128.7829991451394,
+        "InitialHeight": 276.1433720948923,
+        "TextblockHeight": 86.5,
+        "Background": "#FFC1D676"
+      }
+    ],
+    "X": -398.92365595048477,
+    "Y": 277.61961129409917,
+    "Zoom": 0.52537827866172881
+  }
+}
