@@ -9,6 +9,7 @@ link: https://slothbcf.azurewebsites.net/
 tags:
   - sloth
 github: https://github.com/simonmoreau/Sloth
+images: products/sloth/
 ---
 
 You can upload a BCF file and see the resulting report in your browser, showing the main information in your issue: Tittle, author and creation date, along with the first screenshot in your issue.

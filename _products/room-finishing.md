@@ -9,6 +9,7 @@ link: https://apps.autodesk.com/RVT/en/Detail/Index?id=5641957956279354474&appLa
 tags:
   - room-finishing
 github: https://github.com/simonmoreau/RoomFinishes
+images: products/room-finishing/
 ---
 
 Creating architectural details for shop drawings can be particularly long and tedious when it comes to modeling every detail in a room.

@@ -9,6 +9,7 @@ link: https://apps.autodesk.com/RVT/en/Detail/Index?id=232313135819866372&appLan
 tags:
   - time-stamper
 github: https://github.com/simonmoreau/timestamp
+images: products/time-stamper/
 ---
 
 Keep track and manage the origin and authoring date of every Autodesk® Revit® element.

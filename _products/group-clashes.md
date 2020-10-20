@@ -9,6 +9,7 @@ link: https://apps.autodesk.com/NAVIS/en/Detail/Index?id=7544208847822212204&app
 tags:
   - group-clashes
 github: https://github.com/simonmoreau/GroupClashes
+images: products/group-clashes/
 ---
 
 This plug-in for Autodesk® Navisworks® Manage will help you to find meaning into the thousands of clashes found in complex models.
@@ -21,3 +22,4 @@ With Group Clashes, you can group clashes by:
 * Nearest grid intersection
 * Element belonging to a model
 * Status, approval or assignment
+
