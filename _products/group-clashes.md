@@ -2,7 +2,7 @@
 title: Group Clashes
 author: Simon Moreau
 layout: product
-description: A Revit plugin to group and organize your clash results.
+description: A Navisworks plugin to group and organize your clash results.
 image: /assets/products/group-clashes-icon-large.png
 category: Navisworks
 link: https://apps.autodesk.com/NAVIS/en/Detail/Index?id=7544208847822212204&appLang=en&os=Win64

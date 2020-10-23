@@ -6,4 +6,4 @@ author: Simon Moreau
 layout: products-list
 header: true
 ---
-Over the years, BIM 42 has published various products around Revit, Naviswokrs, IFC, BCF, ... Some are open source, and all are in various state of completion.
+Over the years, BIM 42 has published various products around Revit, Naviswokrs, IFC and BCF. Some are open source, and all are in various state of completion.
