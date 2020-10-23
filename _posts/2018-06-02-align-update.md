@@ -14,6 +14,7 @@ tags:
   - .NET
   - BIM Manager
   - Revit
+  - align
 description: The yearly update of Align for Revit
 ---
 

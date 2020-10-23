@@ -13,6 +13,7 @@ image: /assets/2018/09/GroupClashes_Page_01.jpg
 tags:
   - BIM Manager
   - Navisworks
+  - group-clashes
 description: Video tutorials for Group Clashes
 ---
 A few updates have been made to Group Clashes, my Navisworks plugin to automatically group clashes.

@@ -14,6 +14,7 @@ tags:
   - bimsync
   - IFC
   - Visualization
+  - bimsync-manager
 description: A quantity take-off system for bimsync
 ---
 To spread usage of building models, it is important to provide easy to use interfaces to extract data from these models. Being able to see a model and interact with it is a good first step. The next one is obliviously being able to extract quantities from this model.

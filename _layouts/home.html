@@ -10,15 +10,17 @@
     <header class="header-background">
 
       <div class="clearfix border-bottom-thick header-border">
-        <ul class="list-reset right py-1 header-text font-smoothing">
-          {% for my_page in site.pages %}
-            {% if my_page.title and my_page.header %}
-            <li class="inline-block">
-              <a class="align-middle link-primary header-link mr-2" href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a>
-            </li>
-            {% endif %}
-          {% endfor %}
-        </ul>
+        <div class="mx-auto container px-2">
+          <ul class="list-reset left py-1 header-text font-smoothing">
+            {% for my_page in site.pages %}
+              {% if my_page.title and my_page.header %}
+              <li class="inline-block">
+                <a class="align-middle link-primary header-link mr-2" href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a>
+              </li>
+              {% endif %}
+            {% endfor %}
+          </ul>
+        </div>
       </div>
 
       <div class="container mx-auto px-2 mb-2 clearfix header-text">

@@ -14,6 +14,7 @@ tags:
   - Automation
   - Revit
   - Tips
+  - room-finishing
 ---
 One of my current project at work is to develop an application for the creation of a set of detailed drawings for each room of a building.
 

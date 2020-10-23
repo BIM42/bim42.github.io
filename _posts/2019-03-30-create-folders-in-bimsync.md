@@ -12,6 +12,7 @@ categories:
 image: /assets/2019/03/createFolders.png
 tags:
   - bimsync
+  - bimsync-manager
 description: An update to bimsyncManager to create folders in your bimsync project
 ---
 Thank to [the update of Documents](https://catenda.no/blog/new-feature-release-for-documents-in-bimsync) in bimsync, I was able to update [bimsyncManager](https://bimsyncmanager.firebaseapp.com).

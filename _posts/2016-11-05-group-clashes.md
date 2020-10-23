@@ -14,6 +14,7 @@ tags:
   - Automation
   - Coordination
   - Navisworks
+  - group-clashes
 ---
 If you have already run some clash detection, you have probably ended up with thousand of clashes, and wondering how you could find something interesting in this mess.
 

@@ -14,6 +14,7 @@ tags:
   - Coordination
   - Documentation
   - Revit
+  - time-stamper
 ---
 There is no easy way to override the color of an entire Revit link. Since most of my work involves linking Revit model from various subcontractors, this is something I miss badly.
 

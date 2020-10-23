@@ -14,6 +14,7 @@ tags:
   - bimsync
   - IFC
   - Visualization
+  - bimsync-manager
 description: A new sharing feature for bimsync Manager
 ---
 Letting non-technical users see a model used to be a pain. Web-based viewers have started to make it way easier. They now allow you to review any models without having to install some heavy software or buy the latest gaming computer.

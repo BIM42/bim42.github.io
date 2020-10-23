@@ -15,6 +15,9 @@ tags:
   - Documentation
   - Plugin
   - Revit
+  - align
+  - room-finishing
+  - time-stamper
 ---
 As usual during this time of the year, I published the new version of my plugins for Revit.
 

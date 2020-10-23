@@ -1,0 +1,115 @@
+// Products page text
+.product-page-text {
+    margin-bottom: 1px;
+  }
+
+.product-block {
+    max-height: 23em;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    width: 83.3333333333%;
+    align-items: center;
+    padding-right: 2em;
+}
+
+.image-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.image-block{
+    max-height: 23em;
+    padding: 0.2em;
+    align-self: center;
+}
+
+
+.header-social-product { fill: $color-background; }
+
+.product-image {
+    img {
+        border-radius: 20%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 7em;
+        height: 7em;
+    }
+
+    width: (10 / 12 * 100%);
+    margin-bottom: 1em;
+}
+
+/* default
+---------------------------- */
+.btn-primary {
+    color: $color-title;
+    background-color: $color-dot-accent;
+    border-color: $color-dot-accent;
+    // margin-left: auto;
+    // margin-right: auto;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+.btn-primary:focus {
+    color: $color-title;
+    background-color: $color-code;
+    border-color: $color-code;
+}
+.btn-primary:hover {
+    color: $color-title;
+    background-color: $color-code;
+    border-color: $color-code;
+}
+.btn-primary:active {
+    color: $color-title;
+    background-color: $color-code;
+    border-color: $color-code;
+}
+
+.btn {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.5;
+    padding: 6px 20px;
+
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.btn:focus,
+.btn:active:focus {
+    outline: thin dotted;
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px;
+}
+.btn:hover,
+.btn:focus {
+    color: $color-title;
+    text-decoration: none;
+}
+.btn:active {
+    background-image: none;
+    outline: 0;
+    -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+}
+

@@ -14,6 +14,7 @@ tags:
   - IFC
   - Open BIM
   - Visualization
+  - bimsync-manager
 ---
 Since bimsync has become my main tool for visualizing and analysing building models, I am working on expanding this tool to leverage its power. Among the long list of features I am dreaming of, the most important is to be able to see and interpret non-geometric data, like properties and quantities.
 

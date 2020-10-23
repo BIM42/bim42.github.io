@@ -13,6 +13,8 @@ tags:
   - Plugin
   - Revit
   - Software
+  - room-finishing
+  
 ---
 I keep on working on my Revit add-ins. After Align, it is now Room Finishes who have been updated to support Revit 2017. Along with this update, I also have integrated some new features.
 

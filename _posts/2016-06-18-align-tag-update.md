@@ -14,6 +14,7 @@ tags:
   - Documentation
   - Revit
   - Software
+  - align
 ---
 It is this time of the year again, and I have finally take the time to update Align on the App Store for the new version of Revit.
 

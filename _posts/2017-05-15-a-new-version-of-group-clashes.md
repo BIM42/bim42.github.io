@@ -13,6 +13,7 @@ tags:
   - Automation
   - Coordination
   - Navisworks
+  - group-clashes
 ---
 I just updated my Clash Grouper plugin for Navisworks.
 

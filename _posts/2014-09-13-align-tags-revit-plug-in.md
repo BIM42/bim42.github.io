@@ -13,6 +13,7 @@ tags:
   - .NET
   - BIM Manager
   - Revit
+  - align
 ---
 I just release a new add-in for Revit on the Autodesk App Exchange for aligning and sorting tags on a view.
 

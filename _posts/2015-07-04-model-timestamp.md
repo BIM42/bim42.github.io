@@ -15,6 +15,7 @@ tags:
   - Plugin
   - Revit
   - Schedules
+  - time-stamper
 ---
 As we receive models from subcontractors or partners, we need to integrate them in a coordination model.
 

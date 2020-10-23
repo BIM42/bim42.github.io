@@ -14,6 +14,7 @@ tags:
   - Plugin
   - Revit
   - Software
+  - align
 ---
 This is a long overdue update, but I finally take the time to prepare my Align Tag plug-in for Revit 2016.
 
