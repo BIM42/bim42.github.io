@@ -1,6 +1,16 @@
-<div 
+<!-- <div 
 class="just-comments"
 data-allowguests="true"
 data-apikey="824233b3-56e1-418b-97e5-b49e60ae8e64">
 </div>
-<script async src="https://just-comments.com/w.js"></script>
+<script async src="https://just-comments.com/w.js"></script> -->
+
+<div id="hyvor-talk-view"></div>
+<script type="text/javascript">
+    var HYVOR_TALK_WEBSITE = 2393; // DO NOT CHANGE THIS
+    var HYVOR_TALK_CONFIG = {
+        url: '{{ page.url | absolute_url }}',
+        id: '{{page.id}}'
+    };
+</script>
+<script async type="text/javascript" src="//talk.hyvor.com/web-api/embed"></script>
