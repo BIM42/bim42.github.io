@@ -14,6 +14,7 @@ tags:
   - IFC
   - Forge
   - Revit
+  - revit-to-ifc
 description: An online application to convert Revit files to IFC, powered by Autodesk Forge.
 ---
 
