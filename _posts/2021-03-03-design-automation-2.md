@@ -1,7 +1,7 @@
 ---
 id: 1285
 title: Design Automation For Revit - Part 2
-date: 2021-02-01T10:00:00+00:00
+date: 2021-03-03T10:00:00+00:00
 author: Simon Moreau
 layout: post
 guid: https://www.bim42.com/?p=1285
