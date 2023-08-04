@@ -10,7 +10,7 @@ layout: default
   <div class="prose mb-4 py-4 product-page-text">
     {{ content }}
   </div>
-  <div class="container mx-auto clearfix">
+  <div class="container mx-auto flexbox">
     {% for product in site.products %}{% include product_block.html %}{% endfor %}
   </div>
 </article>
