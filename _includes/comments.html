@@ -4,7 +4,7 @@ data-allowguests="true"
 data-apikey="824233b3-56e1-418b-97e5-b49e60ae8e64">
 </div>
 <script async src="https://just-comments.com/w.js"></script> -->
-
+<!-- 
 <div id="hyvor-talk-view"></div>
 <script type="text/javascript">
     var HYVOR_TALK_WEBSITE = 2401; // DO NOT CHANGE THIS
@@ -13,4 +13,10 @@ data-apikey="824233b3-56e1-418b-97e5-b49e60ae8e64">
         id: '{{ "www.bim42.com" | append: page.url }}' 
     };
 </script>
-<script async type="text/javascript" src="//talk.hyvor.com/web-api/embed"></script>
+<script async type="text/javascript" src="//talk.hyvor.com/web-api/embed"></script> -->
+
+<script async src="https://talk.hyvor.com/embed/embed.js" type="module"></script>
+<hyvor-talk-comments 
+    website-id=2401
+    page-id='{{ "www.bim42.com" | append: page.url }}' >
+</hyvor-talk-comments>
