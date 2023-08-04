@@ -57,6 +57,6 @@ After running the Dynamo script, every Limit Offset is updated to reflect the ac
 
 ![After]({{ "/assets/2016/05/After.jpg" | absolute_url }})
 
-Using the Raybounce node can be quite challenging, especially when it comes to sorting the resulting points, but it is totally worth the effort. You will find [here](https://drive.google.com/file/d/0B_fvbfIWQ5JJY3U4TkduaGUwZkk/view?usp=sharing) the Dynamo definition, feel free to use it for your own project.
+Using the Raybounce node can be quite challenging, especially when it comes to sorting the resulting points, but it is totally worth the effort. You will find [here](https://drive.google.com/file/d/0B_fvbfIWQ5JJY3U4TkduaGUwZkk/view?usp=sharing&resourcekey=0-bhxRQLdsP2KHAZQl5S1I2Q) the Dynamo definition, feel free to use it for your own project.
 
 This was also the occasion for me to update DynamoMEP for Dynamo 1.0, and add a Grid function to create a nice array of point in a Room or a Space. As usual, you will find these updates in the Dynamo Package Manager.

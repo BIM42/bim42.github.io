@@ -34,7 +34,7 @@ The following Dynamo definition sums airflows of the selected Air Terminal and p
 
 A word of warning anyway, since this placeholder family is integrated into the system, flow sum for the duct system is multiplied by two, since Revit count both the airflow of every air terminal and the airflow coming from the placeholder family.
 
-[Dynamo File](https://drive.google.com/open?id=0B_fvbfIWQ5JJdHBST0ZHc05ZelU)
+[Dynamo File](https://drive.google.com/file/d/0B_fvbfIWQ5JJdHBST0ZHc05ZelU/view?usp=sharing&resourcekey=0-kT7kbHKikDru4GrOn8n9iw)
 
 ## From Specified Airflow to actual terminal Flow
 
@@ -48,7 +48,7 @@ As we update the Specified Airflow of each MEP Spaces, this value will be divide
 
 ![figure10]({{ "/assets/2016/04/figure10.jpg" | absolute_url }})
 
-[Dynamo File](https://drive.google.com/open?id=0B_fvbfIWQ5JJVDY3WFdxSTJGcVk)
+[Dynamo File](https://drive.google.com/file/d/0B_fvbfIWQ5JJVDY3WFdxSTJGcVk/view?usp=sharing&resourcekey=0-awprLlRa_1N1xKhtFQYQdg)
 
 ## Terminal Max Flow
 
@@ -66,7 +66,7 @@ The last step is to override the color of these terminals to override by color t
 
 This fairly simple example showcase the possibilities of Dynamo combined with the proper Revit objects library.
 
-[Dynamo File](https://drive.google.com/open?id=0B_fvbfIWQ5JJaHRQbWVKZ1VBZEU)
+[Dynamo File](https://drive.google.com/file/d/0B_fvbfIWQ5JJaHRQbWVKZ1VBZEU/view?usp=sharing&resourcekey=0-joWDIMakld7Cc525dNb8OA)
 
 ## Conclusion
 

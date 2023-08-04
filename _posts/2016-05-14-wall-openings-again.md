@@ -57,4 +57,4 @@ As I was searching for a solution to calculate the elevation, I notice a feature
 
 ![Dynamo]({{ "/assets/2016/05/Dynamo.jpg" | absolute_url }})
 
-My work with wall openings is far from complete, and subjects like sharing these openings, and managing their modifications are still pending. You will find [here ](https://drive.google.com/folderview?id=0B_fvbfIWQ5JJVWU5MjdvQ1dXd00&usp=sharing)the different families, models and Dynamo definition used in this article, feel free to use or improve on them.
+My work with wall openings is far from complete, and subjects like sharing these openings, and managing their modifications are still pending. You will find [here](https://drive.google.com/drive/folders/0B_fvbfIWQ5JJVWU5MjdvQ1dXd00?resourcekey=0-gQO_MGUdCOqkcZkrxRiB6w&usp=sharing) the different families, models and Dynamo definition used in this article, feel free to use or improve on them.
