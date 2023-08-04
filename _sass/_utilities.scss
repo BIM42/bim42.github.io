@@ -95,6 +95,11 @@
   row-gap: 2rem;
 }
 
+.flexbox::after {
+  content: "";
+  flex: auto;
+}
+
 .align-middle { vertical-align: middle; }
 
 /* Padding */
