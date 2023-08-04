@@ -15,12 +15,6 @@
     padding-right: 2em;
 }
 
-.image-container{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-
 .image-block{
     max-height: 23em;
     padding: 0.2em;
@@ -40,7 +34,7 @@
         height: 7em;
     }
 
-    width: (10 / 12 * 100%);
+    width: calc(10 / 12 * 100%);
     margin-bottom: 1em;
 }
 

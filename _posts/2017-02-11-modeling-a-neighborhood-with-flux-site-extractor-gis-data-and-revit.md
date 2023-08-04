@@ -22,7 +22,7 @@ The most promising resource out there for creating a context in a Revit model is
 ![01-Flux-Site-EXtractor]({{ "/assets/2017/02/01-Flux-Site-EXtractor.jpg" | absolute_url }})
 The Flux Site Extractor interface
 
-After retrieving this data in my Flux Site Project, I use the [Flux Dynamo nodes](https://drive.google.com/file/d/0B_fvbfIWQ5JJMTVLbUtxUGxfZ2M/view?usp=sharing) to get the topography as a mesh, extract the vertices of this mesh as points and use these points to create a toposurface in Revit.
+After retrieving this data in my Flux Site Project, I use the [Flux Dynamo nodes](https://drive.google.com/file/d/0B_fvbfIWQ5JJMTVLbUtxUGxfZ2M/view?usp=sharing&resourcekey=0-LuPiAcnDmuqftKy26eqXGw) to get the topography as a mesh, extract the vertices of this mesh as points and use these points to create a toposurface in Revit.
 
 ![02-Toposurface-from-Flux]({{ "/assets/2017/02/02-Toposurface-from-Flux.jpg" | absolute_url }})
 Creating a toposurface from the Flux Site Extractor
@@ -52,7 +52,7 @@ Since it is GIS data, I am using a nice tip from [LandArch](https://landarchbim.
 
 I am using the FamilyInstance.ByGeometry node from the great [Spring nodes](https://dynamonodes.com/2016/01/28/what-is-spring-nodes/) of [Dimitar Venkov](https://twitter.com/5devene?lang=en) to create the buildings as mass families.
 
-[This Dynamo definition](https://drive.google.com/file/d/0B_fvbfIWQ5JJeExWd0szejFtM1k/view?usp=sharing) create a mass family for every building in the shapefile, extruded up to its actual height. Combined with the toposurface created with Flux, this look like an actual neighborhood, where you can think about massing and site integration directly in Revit.
+[This Dynamo definition](https://drive.google.com/file/d/0B_fvbfIWQ5JJeExWd0szejFtM1k/view?usp=sharing&resourcekey=0-KSzx2eDvtB_ER5cpKnqaGQ) create a mass family for every building in the shapefile, extruded up to its actual height. Combined with the toposurface created with Flux, this look like an actual neighborhood, where you can think about massing and site integration directly in Revit.
 
 ![05-Site-integration]({{ "/assets/2017/02/05-Site-integration.jpg" | absolute_url }})
 Site integration of a project

@@ -46,7 +46,7 @@ You can also retrieve parameters values from these architectural rooms and paste
 
 As rooms evolve in the architectural model, you will be able to recreate on the fly the corresponding Spaces. However, be careful not to duplicate an existing space.
 
-[Dynamo File](https://drive.google.com/open?id=0B_fvbfIWQ5JJVWxaWGN3T2puQzQ)
+[Dynamo File](https://drive.google.com/file/d/0B_fvbfIWQ5JJVWxaWGN3T2puQzQ/view?resourcekey=0-FRSsf1J0nTE3NW7mUL7g1g)
 
 ## Link between Excel and Spaces
 
@@ -74,6 +74,6 @@ The entire business of retrieving values from Excel spreadsheet is generally onl
 
 Just make sure that your MEP Space numbers match between your Excel file and your Revit model, since any discrepancy will make the FirstIndexOf fail.
 
-[Dynamo File](https://drive.google.com/open?id=0B_fvbfIWQ5JJcVBmRDYxTWFIMjQ)
+[Dynamo File](https://drive.google.com/file/d/0B_fvbfIWQ5JJcVBmRDYxTWFIMjQ/view?resourcekey=0-BZq_uSCZGwbNU-cXA4qqBQ)
 
 _Next week, stay tuned for the second part of this post, where all secrets of airflow and terminals will be revealed._

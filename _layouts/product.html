@@ -25,7 +25,7 @@ layout: default
   <div class="prose" itemprop="articleBody">
     {{ content }}
 
-    <div class="container mx-auto image-container">
+    <div class="container mx-auto flexbox">
       {% for image in site.static_files %}
         {% if image.path contains page.images %}
           <div class="mb-2 prose left col-4 sm-width-full image-block">

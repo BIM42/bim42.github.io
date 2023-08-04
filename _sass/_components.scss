@@ -31,7 +31,7 @@ article {
     width: 100%;
 
     @media (min-width: $breakpoint-lg) {
-      width: (10 / 12 * 100%); // matches col-10
+      width: calc(10 / 12 * 100%); // matches col-10
     }
 
   }
@@ -72,7 +72,7 @@ article {
     @media (min-width: $breakpoint-lg) {
       padding-left: $spacer-3;
       margin: $spacer-4 0 $spacer-4 -40px;
-      max-width: (11 / 10 * 100%);
+      max-width: calc(11 / 10 * 100%);
 
       p {
         font-size: 32px;
